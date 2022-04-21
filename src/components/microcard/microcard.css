@@ -22,3 +22,18 @@
 .next {
   color: #fe5475;
 }
+@media only screen and (max-width: 850px) {
+  .micro-content,
+  .next {
+    display: none;
+  }
+  .img-profile {
+    width: 30px;
+    height: 30px;
+    background-color: red;
+    border-radius: 25px;
+
+    object-fit: cover;
+    margin: 10px 15px 10px 0;
+  }
+}

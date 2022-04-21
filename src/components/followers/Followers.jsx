@@ -24,6 +24,10 @@ function Followers() {
       <h5 className="suggest-account">Suggested accounts</h5>
       <MicroCard />
       <div className="line"></div>
+      <div className="followers-accounts">
+        <h3>Following accounts</h3>
+        <h4>Accounts you follow will appear here</h4>
+      </div>
     </div>
   );
 }
