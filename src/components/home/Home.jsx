@@ -1,4 +1,5 @@
 import React from "react";
+import Card from "../card/Card";
 import Followers from "../followers/Followers";
 import Header from "./../header/Header";
 import "./home.css";
@@ -8,6 +9,7 @@ function Home() {
     <div>
       <Header />
       <Followers />
+      <Card />
     </div>
   );
 }
