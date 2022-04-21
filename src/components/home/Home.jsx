@@ -6,9 +6,11 @@ import "./home.css";
 
 function Home() {
   return (
-    <div>
+    <div className="home-banner">
       <Header />
       <Followers />
+      <Card />
+      <Card />
       <Card />
     </div>
   );

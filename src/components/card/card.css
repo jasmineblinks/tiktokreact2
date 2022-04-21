@@ -1,11 +1,12 @@
 .content-card {
-  max-width: 700px;
+  max-width: 600px;
   height: 70vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 50px auto auto auto;
+  margin: 50px 50vmin auto auto;
   background-color: palevioletred;
+
   /* border-bottom: px solid rgb(227, 227, 228) !important; */
   border-bottom: 2px solid #333 !important;
 }
