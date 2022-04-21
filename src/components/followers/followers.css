@@ -20,7 +20,7 @@
   border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #b30000;
+  background: lightgrey;
 }
 
 .bold-content {
