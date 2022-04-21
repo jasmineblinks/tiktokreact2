@@ -20,7 +20,7 @@ function Card() {
   return (
     <div className="card-container">
       <div className="break" />
-      <div className="section">
+      <div className="card-section">
         <div className="user-info">
           {/* <img className="user-profile" src={profile} alt="profile" />s */}
           <div>
