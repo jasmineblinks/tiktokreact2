@@ -1,12 +1,16 @@
-.content-card {
-  max-width: 600px;
-  height: 70vh;
+html,
+body {
+  padding: 0%;
+  margin: 0%;
+}
+.card-container {
+  max-width: 500px;
+  height: 50vh;
+  margin: 30px auto auto auto;
+  padding: 20px 0;
   display: flex;
   justify-content: center;
-  align-items: center;
-  margin: 50px 50vmin auto auto;
-  background-color: palevioletred;
-
-  /* border-bottom: px solid rgb(227, 227, 228) !important; */
-  border-bottom: 2px solid #333 !important;
+  align-items: flex-start;
+  flex-direction: column;
+  border-bottom: 2px solid rgb(227, 227, 228) !important;
 }
