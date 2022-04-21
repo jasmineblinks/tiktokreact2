@@ -7,7 +7,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route exact path="/" element={<ProfileHeader />} />
+        <Route exact path="/" element={<Header />} />
       </Routes>
     </BrowserRouter>
   );

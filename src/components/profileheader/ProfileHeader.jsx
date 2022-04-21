@@ -1,8 +1,11 @@
 import React from "react";
 import tiktoklogo from "../../images/tiktoklogo.png";
-import dots from "../../images/menu-dots.svg";
 import search from "../../images/search.svg";
 import { Link } from "react-router-dom";
+import profile from "../../images/profile.jpg";
+import letter from "../../images/letter.svg";
+import message from "../../images/message.svg";
+import "./profileheader.css";
 
 function ProfileHeader() {
   return (
@@ -20,13 +23,19 @@ function ProfileHeader() {
         </button>
       </form>
       <ul className="nav-links">
-        <li>Upload</li>
-
-        <Link to="/profile" style={{ textDecoration: "none" }}>
-          <li className="btn">Log in</li>
+        <Link to="/upload">
+          <li className="upload"> </li>
         </Link>
+
         <li>
-          <img src={dots} alt="logo" />
+          {" "}
+          <img src={message} alt="logo" />
+        </li>
+        <li>
+          <img src={letter} alt="logo" />
+        </li>
+        <li>
+          <img className="profile" src={profile} alt="logo" />
         </li>
       </ul>
     </div>

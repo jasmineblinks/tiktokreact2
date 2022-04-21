@@ -1,0 +1,23 @@
+.upload {
+  width: 30px;
+  height: 25px;
+  margin-top: 15px;
+  background-image: url("https://i.imgur.com/0MtQ9RF.png");
+  background-size: 30px;
+}
+.profile {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+
+@media only screen and (max-width: 850px) {
+  .upload {
+    display: none;
+  }
+  .profile {
+    width: 29px;
+    height: 29px;
+    border-radius: 50%;
+  }
+}
