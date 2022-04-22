@@ -2,6 +2,7 @@
   height: 10px;
 }
 .card-container {
+  position: relative;
   display: flex;
   justify-content: center;
   margin: auto;
