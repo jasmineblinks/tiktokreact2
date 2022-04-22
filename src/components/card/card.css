@@ -2,7 +2,7 @@
   height: 10px;
 }
 .card-container {
-  position: relative;
+  /* position: relative; */
   display: flex;
   justify-content: center;
   margin: auto;
@@ -90,6 +90,7 @@
 }
 .video-socials {
   display: flex;
+  /* position: relative; */
 }
 @media only screen and (max-width: 850px) {
   .content-card {

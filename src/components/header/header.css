@@ -12,6 +12,7 @@ body {
   background-color: #ffffff;
   justify-content: space-between;
   position: sticky;
+  z-index: 3;
   align-items: center;
   border-bottom: 2px solid lightgray;
 }
