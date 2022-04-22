@@ -29,10 +29,7 @@ function Card() {
                 <h3 className="bold">emmzy</h3>
                 <p className="username">emma mbonu</p>
               </div>
-              <h5>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Tenetur.
-              </h5>
+              <h5>Door number one or door number two</h5>
             </div>
           </div>
         </div>
