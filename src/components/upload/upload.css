@@ -39,6 +39,13 @@
   border-radius: 5px;
   outline: none;
 }
+#caption::placeholder {
+  text-align: right;
+  color: #000;
+  font-weight: bold;
+  font-size: 2vmin;
+}
+
 #cover {
   padding: 10px;
   border: 1px solid #ccc;

@@ -38,7 +38,7 @@ function Upload() {
         <div className="second-wrapper">
           <label htmlFor="">Caption</label>
 
-          <input type="text" name="" id="caption" />
+          <input type="text" name="" id="caption" placeholder="@ #" />
 
           <label htmlFor="">Cover</label>
           <textarea name="" id="cover" cols="30" rows="10"></textarea>
@@ -57,7 +57,7 @@ function Upload() {
                 id="comment"
                 name="comment"
                 value="comment"
-                checked="checked"
+                checked
               />
               <label for="vehicle1"> Comment</label>
 
@@ -66,7 +66,7 @@ function Upload() {
                 id="duet"
                 name="duet"
                 value="duet"
-                checked="checked"
+                checked
               />
               <label for="vehicle2"> Duet</label>
 
@@ -75,7 +75,7 @@ function Upload() {
                 id="stitch"
                 name="stitch"
                 value="stitch"
-                checked="checked"
+                checked
               />
               <label for="vehicle3"> Stitch</label>
             </form>
@@ -83,7 +83,7 @@ function Upload() {
           <div style={{ display: "flex", gap: "20px" }}>
             <label htmlFor="">Run a copy check</label>
 
-            <label class="switch">
+            <label className="switch">
               <input type="checkbox" />
               <span class="slider round"></span>
             </label>
