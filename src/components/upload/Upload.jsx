@@ -51,34 +51,25 @@ function Upload() {
 
           <label htmlFor="">Allow users to:</label>
           <div>
-            <form className="checked-input">
-              <input
-                type="checkbox"
-                id="comment"
-                name="comment"
-                value="comment"
-                checked
-              />
-              <label for="vehicle1"> Comment</label>
+            <div className="checked-input">
+              <label class="comment-banner">
+                <input type="checkbox" checked="checked" />
+                <span class="comment"></span>
+                Comment
+              </label>
 
-              <input
-                type="checkbox"
-                id="duet"
-                name="duet"
-                value="duet"
-                checked
-              />
-              <label for="vehicle2"> Duet</label>
+              <label class="comment-banner">
+                <input type="checkbox" checked="checked" />
+                <span class="comment"></span>
+                Duet
+              </label>
 
-              <input
-                type="checkbox"
-                id="stitch"
-                name="stitch"
-                value="stitch"
-                checked
-              />
-              <label for="vehicle3"> Stitch</label>
-            </form>
+              <label class="comment-banner">
+                <input type="checkbox" checked="checked" />
+                <span class="comment"></span>
+                Stitch
+              </label>
+            </div>
           </div>
           <div style={{ display: "flex", gap: "20px" }}>
             <label htmlFor="">Run a copy check</label>
