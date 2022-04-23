@@ -38,10 +38,10 @@ function Upload() {
         <div className="second-wrapper">
           <label htmlFor="">Caption</label>
 
-          <input type="text" name="" id="" />
+          <input type="text" name="" id="caption" />
 
           <label htmlFor="">Cover</label>
-          <textarea name="" id="" cols="30" rows="10"></textarea>
+          <textarea name="" id="cover" cols="30" rows="10"></textarea>
           <label for="country">Who can view this video</label>
           <select id="country" name="country" className="form-content">
             <option value="public">Public</option>
@@ -80,13 +80,13 @@ function Upload() {
               <label for="vehicle3"> Stitch</label>
             </form>
           </div>
-          <div style={{ display: "flex" }}>
+          <div style={{ display: "flex", gap: "20px" }}>
             <label htmlFor="">Run a copy check</label>
-            {/* <Form.Check
-              style={{ fontSize: "25px" }}
-              type="switch"
-              id="custom-switch"
-            /> */}
+
+            <label class="switch">
+              <input type="checkbox" />
+              <span class="slider round"></span>
+            </label>
           </div>
           <p style={{ color: "grey" }}>
             We'll check your video for potential copyright infringements on used
