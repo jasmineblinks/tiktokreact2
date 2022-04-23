@@ -23,7 +23,7 @@ function Card() {
         <div className="break" />
         <div className="card-section">
           <div className="user-info">
-            {/* <img className="user-profile" src={profile} alt="profile" />s */}
+            <img className="user-profile" src={profile} alt="profile" />
             <div>
               <div className="section-profile">
                 <h3 className="bold">emmzy</h3>
@@ -44,6 +44,7 @@ function Card() {
               type="video/mp4"
             />
           </video>
+
           <div className="section-content socials">
             <div className="icon">
               <img src={heart} width={"25px"} alt="heart" />
