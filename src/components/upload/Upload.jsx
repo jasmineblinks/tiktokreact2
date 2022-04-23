@@ -42,14 +42,13 @@ function Upload() {
 
           <label htmlFor="">Cover</label>
           <textarea name="" id="" cols="30" rows="10"></textarea>
+          <label for="country">Who can view this video</label>
+          <select id="country" name="country" className="form-content">
+            <option value="public">Public</option>
+            <option value="friends">Friends</option>
+            <option value="private">Private</option>
+          </select>
 
-          {/* <label htmlFor="">Who can view this video</label>
-
-          <Form.Select className="form-content" size="sm">
-            <option>Public</option>
-            <option>Friends</option>
-            <option>Private</option>
-          </Form.Select> */}
           <label htmlFor="">Allow users to:</label>
           <div>
             <form className="checked-input">
