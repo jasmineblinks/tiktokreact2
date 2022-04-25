@@ -109,8 +109,10 @@ const VideoEdit = () => {
     <div className={"header-banner"}>
       <div className={"banner-content-wrapper"}>
         <section className={"banner-content"}>
-          {/* <h1 id={"title"}>Cloudinary video Editor</h1>
-          <p className={"about-me"}>
+          <h3 id={"title"} className={"title-content"}>
+            Upload With Video Effect
+          </h3>
+          {/* <p className={"about-me"}>
             If you find it difficult uploading videos, worry no more. Using our
             app you can easily upload, edit videos to cloudinary.
             <br />
