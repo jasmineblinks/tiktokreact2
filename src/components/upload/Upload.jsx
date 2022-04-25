@@ -4,13 +4,22 @@ import upload from "../../images/upload.svg";
 import { AdvancedVideo } from "@cloudinary/react";
 
 import { Cloudinary } from "@cloudinary/url-gen";
-import { fill } from "@cloudinary/url-gen/actions/resize";
-import { byRadius } from "@cloudinary/url-gen/actions/roundCorners";
-import { FocusOn } from "@cloudinary/url-gen/qualifiers/focusOn";
-import { Gravity } from "@cloudinary/url-gen/qualifiers";
-import { AutoFocus } from "@cloudinary/url-gen/qualifiers/autoFocus";
-import { transform } from "lodash";
-import { reverse, accelerate, blur } from "@cloudinary/url-gen/actions/effect";
+// import { fill } from "@cloudinary/url-gen/actions/resize";
+// import { byRadius } from "@cloudinary/url-gen/actions/roundCorners";
+// import { FocusOn } from "@cloudinary/url-gen/qualifiers/focusOn";
+// import { Gravity } from "@cloudinary/url-gen/qualifiers";
+// import { AutoFocus } from "@cloudinary/url-gen/qualifiers/autoFocus";
+// import { transform } from "lodash";
+import {
+  reverse,
+  accelerate,
+  blur,
+  deshake,
+  noise,
+  loop,
+  boomerang,
+  borders,
+} from "@cloudinary/url-gen/actions/effect";
 import { by3dLut } from "@cloudinary/url-gen/actions/adjust";
 function handleErrors(response) {
   if (!response.ok) {
@@ -92,6 +101,8 @@ function Upload() {
           ...prev,
           height: res.height,
           width: res.width,
+          blur: res.blur,
+          deshake: res.deshake,
         }));
 
         setLoading(false);
@@ -196,7 +207,15 @@ function Upload() {
               </div>
               <div>
                 <label htmlFor="">Loop</label>
-                <input type="range" name="loop" id="loop" min="1" max="10" />
+                <input
+                  type="range"
+                  name="loop"
+                  id="loop"
+                  min="1"
+                  max="10"
+                  onChange={onChange}
+                  value={transformState.loop}
+                />
               </div>
               <div>
                 <label htmlFor="">Visual noise</label>
@@ -318,8 +337,7 @@ function Upload() {
           <AdvancedVideo
             // src={}
             cldVid={cld.video(videoSrc).effect(
-              blur(transformState.blur)
-              // .deshake(transformState.deshake)
+              blur(transformState.blur).deshake(transformState.deshake)
               // .resize(
               // fill(transformState.fill)
               //   .width(transformState.width)
