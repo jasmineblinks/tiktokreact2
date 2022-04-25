@@ -11,7 +11,7 @@ import apple from "../../images/apple.svg";
 const Login = () => {
   return (
     <div className="base">
-      <div className="container">
+      <div className="login-content">
         <h3>Log in to TikTok</h3>
         <p>
           {" "}
@@ -24,7 +24,7 @@ const Login = () => {
             </span>
             <span className="btn__text"> Use phone/email/username</span>
           </button>
-          <button className="btn-social">
+          <button className="btn-socials">
             <span className="btn__icon">
               {" "}
               <img src={facebook} alt="logo" />

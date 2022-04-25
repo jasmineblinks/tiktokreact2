@@ -107,19 +107,6 @@
 .video-socials {
   display: flex;
 }
-.suggested-box {
-  display: flex;
-  justify-content: end;
-  min-width: 400px;
-  padding: 10px;
-  text-align: center;
-}
-
-.suggested {
-  width: 100px;
-  border: 1px solid #fe5475;
-  border-radius: 10px;
-}
 
 @media only screen and (max-width: 850px) {
   .content-card {

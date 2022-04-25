@@ -1,3 +1,13 @@
 .minicard {
   color: #fe5475;
 }
+.suggest-follow {
+  border: 1px solid #fe5475;
+  border-radius: 10px;
+  min-width: 130px;
+  padding: inherit;
+  margin: 10px auto auto 70px;
+}
+.suggest-follow h5 {
+  text-align: center;
+}

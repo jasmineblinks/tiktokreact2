@@ -1,11 +1,12 @@
 import React from "react";
-import profile2 from "../../images/goddy.jpg";
 import "./minicard.css";
 
 function Minicard() {
   return (
-    <div className="section-mini minicard">
-      <h5>Follow</h5>
+    <div className=" minicard">
+      <div className="suggest-follow">
+        <h5>Follow</h5>
+      </div>
     </div>
   );
 }

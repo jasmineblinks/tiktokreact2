@@ -90,11 +90,8 @@ function Card() {
           </div>
         </div>
       </div>
-      <div className="suggested-box">
-        <div className="suggested">
-          <Minicard />
-        </div>
-      </div>
+
+      <Minicard />
     </div>
   );
 }
