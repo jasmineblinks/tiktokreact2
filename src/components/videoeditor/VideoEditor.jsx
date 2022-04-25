@@ -10,6 +10,7 @@ import { FocusOn } from "@cloudinary/url-gen/qualifiers/focusOn";
 import { Gravity } from "@cloudinary/url-gen/qualifiers";
 import { AutoFocus } from "@cloudinary/url-gen/qualifiers/autoFocus";
 import { transform } from "lodash";
+import { reverse, accelerate, blur } from "@cloudinary/url-gen/actions/effect";
 
 // import Transformation from "@cloudinary/url-gen/backwards/transformation";
 // import { Transformation } from "@cloudinary/url-gen";
@@ -29,8 +30,10 @@ const VideoEdit = () => {
   const [videoSrc, setVideoSrc] = useState("");
   const [transformState, setTransformState] = useState({
     // fill: 60,
-    width: 60,
-    height: 60,
+    // width: 60,
+    // height: 60,
+    blur: 500,
+    deshake: 32,
   });
   const [cldCloudName, setCldCloudName] = useState("");
 
@@ -145,7 +148,7 @@ const VideoEdit = () => {
               />
             </label> */}
             <div>
-              <label htmlFor="">width:</label>
+              {/* <label htmlFor="">width:</label>
               <input
                 onChange={onChange}
                 type="text"
@@ -158,6 +161,13 @@ const VideoEdit = () => {
                 type="text"
                 value={transformState.height}
                 name="height"
+              /> */}
+              <label htmlFor="">Blur:</label>
+              <input
+                onChange={onChange}
+                type="text"
+                value={transformState.blur}
+                name="blur"
               />
             </div>
           </div>
@@ -189,10 +199,14 @@ const VideoEdit = () => {
             {videoSrc ? (
               <AdvancedVideo
                 // src={}
-                cldVid={cld.video(videoSrc).resize(
-                  fill(transformState.fill)
-                    .width(transformState.width)
-                    .height(transformState.height)
+                cldVid={cld.video(videoSrc).effect(
+                  blur(transformState.blur)
+                  // .deshake(transformState.deshake)
+                  // .resize(
+                  // fill(transformState.fill)
+                  //   .width(transformState.width)
+                  //   .height(transformState.height)
+
                   // .gravity(
                   //   Gravity.autoGravity().autoFocus(AutoFocus.focusOn(FocusOn.faces()))
                   // )

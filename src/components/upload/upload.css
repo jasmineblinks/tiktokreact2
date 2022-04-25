@@ -237,3 +237,8 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
+.first-effect,
+.second-effect {
+  display: flex;
+  justify-content: space-between;
+}
