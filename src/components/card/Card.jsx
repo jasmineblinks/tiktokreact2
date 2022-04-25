@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import "./card.css";
 import profile from "../../images/goddy.jpg";
 import share from "../../images/share.svg";
@@ -8,15 +8,14 @@ import { Cloudinary } from "@cloudinary/url-gen";
 import { AdvancedVideo } from "@cloudinary/react";
 import {
   reverse,
-  accelerate,
   blur,
   deshake,
   noise,
   loop,
   boomerang,
-  borders,
 } from "@cloudinary/url-gen/actions/effect";
 import { by3dLut } from "@cloudinary/url-gen/actions/adjust";
+import { border } from "@cloudinary/url-gen/qualifiers/background";
 function Card() {
   const [videoSrc, setVideoSrc] = useState("");
   const [transformState, setTransformState] = useState({
@@ -54,18 +53,16 @@ function Card() {
           <div className="video">
             {videoSrc ? (
               <AdvancedVideo
-                // src={}
-                cldVid={cld.video(videoSrc).effect(
-                  blur(transformState.blur).deshake(transformState.deshake)
-                  // .resize(
-                  // fill(transformState.fill)
-                  //   .width(transformState.width)
-                  //   .height(transformState.height)
-
-                  // .gravity(
-                  //   Gravity.autoGravity().autoFocus(AutoFocus.focusOn(FocusOn.faces()))
-                  // )
-                )}
+                cldVid={cld
+                  .video(videoSrc)
+                  .effect(blur(transformState.blur))
+                  .effect(deshake(transformState.deshake))
+                  .effect(boomerang(transformState.boomerang))
+                  .effect(noise(transformState.noise))
+                  .effect(loop(transformState.loop))
+                  .effect(border(transformState.borders))
+                  .effect(reverse(transformState.reverse))
+                  .effect(by3dLut(transformState.by3dLut))}
                 controls
               />
             ) : (
