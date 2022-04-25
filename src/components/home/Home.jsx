@@ -10,9 +10,6 @@ function Home() {
       <Header />
       <Followers />
       <Card />
-      <Card />
-      <Card />
-      <Card />
     </div>
   );
 }
