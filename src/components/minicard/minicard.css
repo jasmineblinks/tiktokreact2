@@ -1,11 +1,3 @@
 .minicard {
-  /* margin: 10px 0 0 0; */
   color: #fe5475;
-}
-.section-mini {
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  flex-direction: row;
-  margin: auto;
 }

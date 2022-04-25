@@ -16,6 +16,7 @@ import {
 } from "@cloudinary/url-gen/actions/effect";
 import { by3dLut } from "@cloudinary/url-gen/actions/adjust";
 import { border } from "@cloudinary/url-gen/qualifiers/background";
+import Minicard from "../minicard/Minicard";
 function Card() {
   const [videoSrc, setVideoSrc] = useState("");
   const [transformState, setTransformState] = useState({
@@ -86,6 +87,13 @@ function Card() {
             </div>
 
             <div className="social-tag">4000</div>
+          </div>
+        </div>
+      </div>
+      <div className="suggested-box">
+        <div className="section">
+          <div className="suggested">
+            <Minicard />
           </div>
         </div>
       </div>
