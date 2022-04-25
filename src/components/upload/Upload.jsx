@@ -4,23 +4,7 @@ import upload from "../../images/upload.svg";
 import { AdvancedVideo } from "@cloudinary/react";
 
 import { Cloudinary } from "@cloudinary/url-gen";
-// import { fill } from "@cloudinary/url-gen/actions/resize";
-// import { byRadius } from "@cloudinary/url-gen/actions/roundCorners";
-// import { FocusOn } from "@cloudinary/url-gen/qualifiers/focusOn";
-// import { Gravity } from "@cloudinary/url-gen/qualifiers";
-// import { AutoFocus } from "@cloudinary/url-gen/qualifiers/autoFocus";
-// import { transform } from "lodash";
-// import {
-//   reverse,
-//   accelerate,
-//   blur,
-//   deshake,
-//   noise,
-//   loop,
-//   boomerang,
-//   borders,
-// } from "@cloudinary/url-gen/actions/effect";
-// import { by3dLut } from "@cloudinary/url-gen/actions/adjust";
+
 function handleErrors(response) {
   if (!response.ok) {
     throw Error(response.statusText);
@@ -32,9 +16,6 @@ function Upload() {
   const [caption, setCaption] = useState("");
   const [videoSrc, setVideoSrc] = useState("");
   const [transformState, setTransformState] = useState({
-    // fill: 60,
-    // width: 60,
-    // height: 60,
     blur: 500,
     deshake: 32,
     noise: 50,
