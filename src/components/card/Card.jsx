@@ -4,19 +4,36 @@ import profile from "../../images/goddy.jpg";
 import share from "../../images/share.svg";
 import heart from "../../images/heart.svg";
 import comment from "../../images/comment.svg";
-
+import { Cloudinary } from "@cloudinary/url-gen";
+import { AdvancedVideo } from "@cloudinary/react";
+import {
+  reverse,
+  accelerate,
+  blur,
+  deshake,
+  noise,
+  loop,
+  boomerang,
+  borders,
+} from "@cloudinary/url-gen/actions/effect";
+import { by3dLut } from "@cloudinary/url-gen/actions/adjust";
 function Card() {
-  const [playing, setPlaying] = useState(false);
-  const videoRef = useRef(null);
-  const onVideoPress = () => {
-    if (playing) {
-      videoRef.current.pause();
-      setPlaying(false);
-    } else {
-      videoRef.current.play();
-      setPlaying(true);
-    }
-  };
+  const [videoSrc, setVideoSrc] = useState("");
+  const [transformState, setTransformState] = useState({
+    blur: 500,
+    deshake: 32,
+    noise: 50,
+    loop: "34",
+    reverse: "backwards",
+    boomerang: "5.0",
+    borders: "solid 5 red",
+    by3dLut: "iwltbap_aspen.3dl",
+  });
+  const cld = new Cloudinary({
+    cloud: {
+      cloudName: "pueneh",
+    },
+  });
   return (
     <div className="card-container">
       <div className="center-div">
@@ -34,16 +51,27 @@ function Card() {
           </div>
         </div>
         <div className="video-socials">
-          <video
-            className="video"
-            controls
-            ref={videoRef}
-            onClick={onVideoPress}>
-            <source
-              src="https://v16-webapp.tiktok.com/e4acd1d6617991162bdd67a44528d24d/62584776/video/tos/useast2a/tos-useast2a-ve-0068c001/9a3edbe7c4bb4b8081383916fb376214/?a=1988&br=612&bt=306&cd=0%7C0%7C1%7C0&ch=0&cr=0&cs=0&cv=1&dr=0&ds=3&er=&ft=eXd.6HF2Myq8ZJf~hwe2N9twyl7Gb&l=2022041410084101019018602909029870&lr=tiktok_m&mime_type=video_mp4&net=0&pl=0&qs=0&rc=anY6dzQ6ZmU4PDMzNzczM0ApOjk4N2U8ZWU0NzxnZWgzO2c1NDVscjQwZC1gLS1kMTZzczJiYV8xNTJeYDYuYzYwL146Yw%3D%3D&vl=&vr="
-              type="video/mp4"
-            />
-          </video>
+          <div className="video">
+            {videoSrc ? (
+              <AdvancedVideo
+                // src={}
+                cldVid={cld.video(videoSrc).effect(
+                  blur(transformState.blur).deshake(transformState.deshake)
+                  // .resize(
+                  // fill(transformState.fill)
+                  //   .width(transformState.width)
+                  //   .height(transformState.height)
+
+                  // .gravity(
+                  //   Gravity.autoGravity().autoFocus(AutoFocus.focusOn(FocusOn.faces()))
+                  // )
+                )}
+                controls
+              />
+            ) : (
+              <div></div>
+            )}
+          </div>
 
           <div className="section-content socials">
             <div className="icon">
