@@ -237,7 +237,8 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
-.first-effect {
+.first-effect,
+.second-effect {
   display: flex;
   justify-content: space-between;
 }
@@ -250,12 +251,8 @@ input:checked + .slider:before {
 }
 .input-box input[type="text"] {
   padding: 10px;
-  width: 270px;
+  width: 200px;
   margin-top: 20px;
-  margin-left: 10px;
+  margin-left: 8px;
   border-radius: 4px;
-}
-.second-effect {
-  display: flex;
-  justify-content: space-around;
 }

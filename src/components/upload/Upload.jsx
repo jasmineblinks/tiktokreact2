@@ -223,7 +223,7 @@ function Upload() {
                 </label>
               </div>
             </div>
-            <div second-effect>
+            <div className="second-effect">
               <div>
                 <label htmlFor="">Boomerang</label>
                 <select
@@ -266,6 +266,8 @@ function Upload() {
                   <option value="">yellow</option>
                 </select>
               </div>
+            </div>
+            <div>
               <button className="btn">Lut</button>
               <button
                 onClick={handleSubmit}
