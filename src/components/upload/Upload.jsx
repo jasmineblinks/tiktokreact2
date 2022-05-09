@@ -14,7 +14,7 @@ function handleErrors(response) {
 function Upload() {
   const [file, setFile] = useState(null);
   const [caption, setCaption] = useState("");
-  const [videoSrc, setVideoSrc] = useState("");
+  const [videoState, setVideoState] = useState("");
   const [transformState, setTransformState] = useState({
     blur: 500,
     deshake: 32,
@@ -69,7 +69,7 @@ function Upload() {
       body: JSON.stringify({
         cldCloudName,
         preset,
-        videoSrc,
+        videoState,
         transformState,
       }),
     })
@@ -77,7 +77,7 @@ function Upload() {
       // .then((res) => console.log(res))
       .then((res) => {
         console.log(res);
-        setVideoSrc(res.public_id);
+        setVideoState(res.public_id);
         setTransformState((prev) => ({
           ...prev,
           height: res.height,
@@ -142,71 +142,85 @@ function Upload() {
           <label htmlFor="">Caption</label>
 
           <input type="text" name="" id="caption" placeholder="@ #" />
-          <div>
-            <label htmlFor="">Cloud Name:</label>
-            <input
-              onChange={handleCloudName}
-              type="text"
-              value={cldCloudName}
-              name="cloudname"
-            />
+          <div className="input-box">
+            <label htmlFor="">
+              Cloud Name:
+              <input
+                onChange={handleCloudName}
+                type="text"
+                value={cldCloudName}
+                name="cloudname"
+                placeholder="Enter the cloud name here"
+              />
+            </label>
 
-            <label htmlFor="">Upload Preset:</label>
-            <input
-              onChange={handlePresetName}
-              type="text"
-              value={preset}
-              name="preset"
-            />
+            <label htmlFor="">
+              Upload Preset:{" "}
+              <input
+                onChange={handlePresetName}
+                type="text"
+                value={preset}
+                name="preset"
+                placeholder="Enter the upload presets here"
+              />
+            </label>
           </div>
 
           <div>
             <div className="first-effect">
               <div>
-                <label htmlFor="">Blur</label>
-                <input
-                  type="range"
-                  name="blur"
-                  id="blur"
-                  min="0"
-                  max="2000"
-                  onChange={onChange}
-                  value={transformState.blur}
-                />
+                <label htmlFor="">
+                  Blur:
+                  <input
+                    type="range"
+                    name="blur"
+                    id="blur"
+                    min="0"
+                    max="2000"
+                    onChange={onChange}
+                    value={transformState.blur}
+                  />
+                </label>
               </div>
               <div>
-                <label htmlFor="">Deshake</label>
-                <input
-                  type="range"
-                  name="deshake"
-                  id="deshake"
-                  min="0"
-                  max="64"
-                  onChange={onChange}
-                  value={transformState.deshake}
-                />
+                <label htmlFor="">
+                  Deshake:{" "}
+                  <input
+                    type="range"
+                    name="deshake"
+                    id="deshake"
+                    min="0"
+                    max="64"
+                    onChange={onChange}
+                    value={transformState.deshake}
+                  />
+                </label>
               </div>
-              <div>
-                <label htmlFor="">Loop</label>
-                <input
-                  type="range"
-                  name="loop"
-                  id="loop"
-                  min="1"
-                  max="10"
-                  onChange={onChange}
-                  value={transformState.loop}
-                />
+              <div className="visual">
+                <label htmlFor="">
+                  Loop:{" "}
+                  <input
+                    type="range"
+                    name="loop"
+                    id="loop"
+                    min="1"
+                    max="10"
+                    onChange={onChange}
+                    value={transformState.loop}
+                  />
+                </label>
               </div>
-              <div>
-                <label htmlFor="">Visual noise</label>
-                <input
-                  type="range"
-                  name="visual-noise"
-                  id="visual-noise"
-                  min="1"
-                  max="100"
-                />
+              <div className="visual">
+                <label htmlFor="">
+                  Visual noise:{" "}
+                  <input
+                    type="range"
+                    name="visual-noise"
+                    id="visual-noise"
+                    min="1"
+                    max="100"
+                  />
+                </label>
               </div>
             </div>
             <div second-effect>
