@@ -177,6 +177,7 @@
 .second-wrapper label {
   text-align: left;
   font-weight: bold;
+  line-height: 60px;
 }
 .checked-input {
   display: flex;
@@ -256,9 +257,36 @@ input:checked + .slider:before {
   margin-left: 8px;
   border-radius: 4px;
 }
+.second-effect {
+  align-items: center;
+  margin-bottom: 20px;
+}
 .boomerang,
 .borders {
-  display: flex;
-  justify-content: space-around;
-  gap: 10px;
+  font-size: 2vmin;
+}
+select {
+  padding: 8px 16px;
+  border: 1px solid #000;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+.btn-lut {
+  padding: 5px 5px;
+  width: 100px;
+  border-radius: 5px;
+  font-size: 2vmin;
+  background: transparent;
+  cursor: pointer;
+}
+.btn-submit {
+  padding: 7px 7px;
+  width: 200px;
+  border-radius: 5px;
+  display: block;
+  margin: auto;
+  font-size: 3vmin;
+  cursor: pointer;
 }

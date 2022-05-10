@@ -252,8 +252,11 @@ function Upload() {
                 </div>
               </div>
               <div>
+                <button className="btn-lut">Lut</button>
+              </div>
+              <div>
                 <div className="borders">
-                  <label htmlFor="">Borders</label>
+                  <label htmlFor="">Borders:</label>
                   <select name="width" id="width" className="select-effect">
                     <option value="">1</option>
                     <option value="">2</option>
@@ -272,8 +275,8 @@ function Upload() {
               </div>
             </div>
             <div>
-              <button className="btn">Lut</button>
               <button
+                className="btn-submit"
                 onClick={handleSubmit}
                 disabled={(!cldCloudName, !preset)}>
                 Upload
