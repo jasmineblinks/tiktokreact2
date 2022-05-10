@@ -256,3 +256,9 @@ input:checked + .slider:before {
   margin-left: 8px;
   border-radius: 4px;
 }
+.boomerang,
+.borders {
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+}

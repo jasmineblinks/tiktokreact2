@@ -225,46 +225,50 @@ function Upload() {
             </div>
             <div className="second-effect">
               <div>
-                <label htmlFor="">Boomerang</label>
-                <select
-                  name="startOffset"
-                  id="startOffset"
-                  className="select-effect">
-                  <option value="">startOffset</option>
-                  <option value="">1.0</option>
-                  <option value="">2.o</option>
-                  <option value="">3.0</option>
-                  <option value="">4.0</option>
-                  <option value="">5.0</option>
-                </select>
-                <select
-                  name=" endOffSet"
-                  id=" endOffSet"
-                  className="select-effect">
-                  <option value=" endOffSet"> endOffSet</option>
-                  <option value="">1.0</option>
-                  <option value="">2.o</option>
-                  <option value="">3.0</option>
-                  <option value="">4.0</option>
-                  <option value="">5.0</option>
-                </select>
+                <div className="boomerang">
+                  <label htmlFor="">Boomerang:</label>
+                  <select
+                    name="startOffset"
+                    id="startOffset"
+                    className="select-effect">
+                    <option value="">startOffset</option>
+                    <option value="">1.0</option>
+                    <option value="">2.o</option>
+                    <option value="">3.0</option>
+                    <option value="">4.0</option>
+                    <option value="">5.0</option>
+                  </select>
+                  <select
+                    name=" endOffSet"
+                    id=" endOffSet"
+                    className="select-effect">
+                    <option value=" endOffSet"> endOffSet</option>
+                    <option value="">1.0</option>
+                    <option value="">2.o</option>
+                    <option value="">3.0</option>
+                    <option value="">4.0</option>
+                    <option value="">5.0</option>
+                  </select>
+                </div>
               </div>
-              <div className="">
-                <label htmlFor="">Borders</label>
-                <select name="width" id="width" className="select-effect">
-                  <option value="">1</option>
-                  <option value="">2</option>
-                  <option value="">3</option>
-                  <option value="">4</option>
-                  <option value="">5</option>
-                </select>
-                <select name="color" id="color" className="select-effect">
-                  <option value="">red</option>
-                  <option value="">green</option>
-                  <option value="">blue</option>
-                  <option value="">black</option>
-                  <option value="">yellow</option>
-                </select>
+              <div>
+                <div className="borders">
+                  <label htmlFor="">Borders</label>
+                  <select name="width" id="width" className="select-effect">
+                    <option value="">1</option>
+                    <option value="">2</option>
+                    <option value="">3</option>
+                    <option value="">4</option>
+                    <option value="">5</option>
+                  </select>
+                  <select name="color" id="color" className="select-effect">
+                    <option value="">red</option>
+                    <option value="">green</option>
+                    <option value="">blue</option>
+                    <option value="">black</option>
+                    <option value="">yellow</option>
+                  </select>
+                </div>
               </div>
             </div>
             <div>
