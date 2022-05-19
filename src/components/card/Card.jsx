@@ -51,7 +51,7 @@ function Card() {
           </div>
         </div>
         <div className={classes.video_socials}>
-          <div className="video">
+          <div className={classes.video}>
             {videoSrc ? (
               <AdvancedVideo
                 cldVid={cld
@@ -86,7 +86,7 @@ function Card() {
               <img src={share} width={"25px"} alt="share" />
             </div>
 
-            <div className="social-tag">4000</div>
+            <div className={classes.social_tag}>4000</div>
           </div>
         </div>
       </div>
