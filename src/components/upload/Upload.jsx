@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./upload.css";
+import classes from "./upload.module.css";
 import upload from "../../images/upload.svg";
 import { AdvancedVideo } from "@cloudinary/react";
 import {
@@ -87,7 +87,7 @@ function Upload() {
   };
 
   return (
-    <div className="upload-banner">
+    <div className={`${classes.upload_banner} `}>
       <div className="upload-content">
         <div className="first-wrapper">
           <div className="first-wrapper__content">

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./card.css";
+import classes from "./card.module.css";
 import profile from "../../images/goddy.jpg";
 import share from "../../images/share.svg";
 import heart from "../../images/heart.svg";
@@ -35,22 +35,22 @@ function Card() {
     },
   });
   return (
-    <div className="card-container">
-      <div className="center-div">
-        <div className="break" />
-        <div className="card-section">
-          <div className="user-info">
-            <img className="user-profile" src={profile} alt="profile" />
+    <div className={classes.cardContainer}>
+      <div className={classes.center_div}>
+        <div className={classes.break} />
+        <div className={classes.card_section}>
+          <div className={classes.user_info}>
+            <img className={classes.user_profile} src={profile} alt="profile" />
             <div>
-              <div className="section-profile">
-                <h3 className="bold">emmzy</h3>
-                <p className="username">emma mbonu</p>
+              <div className={classes.section_profile}>
+                <h3 className={classes.bold}>emmzy</h3>
+                <p className={classes.username}>emma mbonu</p>
               </div>
               <h5>Door number one or door number two</h5>
             </div>
           </div>
         </div>
-        <div className="video-socials">
+        <div className={classes.video_socials}>
           <div className="video">
             {videoSrc ? (
               <AdvancedVideo
@@ -71,18 +71,18 @@ function Card() {
             )}
           </div>
 
-          <div className="section-content socials">
-            <div className="icon">
+          <div className={`${classes.section_content}${classes.socials}`}>
+            <div className={classes.icon}>
               <img src={heart} width={"25px"} alt="heart" />
             </div>
 
-            <div className="social-tag">5.1m</div>
-            <div className="icon">
+            <div className={classes.social_tag}>5.1m</div>
+            <div className={classes.icon}>
               <img src={comment} width={"25px"} alt="comment" />
             </div>
 
-            <div className="social-tag">20.3k</div>
-            <div className="icon">
+            <div className={classes.social_tag}>20.3k</div>
+            <div className={classes.icon}>
               <img src={share} width={"25px"} alt="share" />
             </div>
 
