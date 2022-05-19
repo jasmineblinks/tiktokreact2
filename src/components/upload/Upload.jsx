@@ -85,20 +85,6 @@ function Upload() {
       })
       .then(handleErrors);
   };
-  // const data = {
-  //   videoSrc: "",
-  //   caption: "This is my upload ",
-  //   transformState: {
-  //     blur: 0,
-  //     deshake: 0,
-  //     noise: 0,
-  //     loop: 0,
-  //     reverse: "backwards",
-  //     boomerang: "solid 3 green",
-  //     by3dLut: "iwltbap_aspen.3dl",
-  //   },
-  // };
-  // console.log(data);
 
   return (
     <div className="upload-banner">
