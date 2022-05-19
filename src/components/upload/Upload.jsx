@@ -151,7 +151,8 @@ function Upload() {
                     //   Gravity.autoGravity().autoFocus(AutoFocus.focusOn(FocusOn.faces()))
                     // )
                   )
-                  .effect(blur(transformState.blur))}
+                  .effect(blur(transformState.blur))
+                  .effect(deshake(transformState.deshake))}
                 controls
               />
             ) : (
