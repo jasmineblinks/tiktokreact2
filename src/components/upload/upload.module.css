@@ -4,7 +4,7 @@
   height: 100%;
   overflow: hidden;
 }
-.upload-content {
+.upload_content {
   display: flex;
   justify-content: space-around;
   max-width: 80%;
@@ -15,7 +15,7 @@
   background: #ffffff;
   border-radius: 10px;
 }
-.first-wrapper {
+.first_wrapper {
   /* flex: 1; */
   height: auto;
   width: 100%;
@@ -24,7 +24,7 @@
   position: relative;
   z-index: 2;
 }
-.second-wrapper {
+.second_wrapper {
   margin: 80px auto auto auto;
   width: 100%;
   overflow: hidden;
@@ -53,7 +53,7 @@
   outline: none;
   resize: none;
 }
-.form-content {
+.form_content {
   width: 300px !important;
   padding: 10px;
   border-radius: 5px;
@@ -74,7 +74,7 @@
   margin: auto;
   transition: all 0.3s ease-out;
 }
-.first-wrapper__content {
+.first_wrapper__content {
   margin: 20px 0 30px 100px;
 }
 .inner__content {
@@ -94,7 +94,7 @@
 }
 
 .selectFile label,
-.input-text {
+.input_text {
   cursor: pointer;
   display: block;
   left: 0;
@@ -119,7 +119,7 @@
   opacity: 0;
 }
 
-.comment-banner {
+.comment_banner {
   display: block;
   position: relative;
   padding-left: 35px;
@@ -129,7 +129,7 @@
   user-select: none;
 }
 
-.comment-banner input {
+.comment_banner input {
   position: absolute;
   opacity: 0;
   cursor: pointer;
@@ -147,11 +147,11 @@
   border-radius: 4px;
 }
 
-.comment-banner:hover input ~ .comment {
+.comment_banner:hover input ~ .comment {
   border: 1px solid #fe2c55;
 }
 
-.comment-banner input:checked ~ .comment {
+.comment_banner input:checked ~ .comment {
   background-color: #fe2c55;
 }
 
@@ -161,11 +161,11 @@
   display: none;
 }
 
-.comment-banner input:checked ~ .comment:after {
+.comment_banner input:checked ~ .comment:after {
   display: block;
 }
 
-.comment-banner .comment:after {
+.comment_banner .comment:after {
   left: 9px;
   top: 5px;
   width: 5px;
@@ -174,12 +174,12 @@
   border-width: 0 3px 3px 0;
   transform: rotate(45deg);
 }
-.second-wrapper label {
+.second_wrapper label {
   text-align: left;
   font-weight: bold;
   line-height: 60px;
 }
-.checked-input {
+.checked_input {
   display: flex;
   align-items: center;
   gap: 12px;
@@ -238,26 +238,26 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
-.first-effect,
-.second-effect {
+.first_effect,
+.second_effect {
   display: flex;
   justify-content: space-between;
 }
-.input-box {
+.input_box {
   display: flex;
   justify-content: space-between;
 }
-.input-box label {
+.input_box label {
   font-size: 2vmin;
 }
-.input-box input[type="text"] {
+.input_box input[type="text"] {
   padding: 10px;
   width: 200px;
   margin-top: 20px;
   margin-left: 8px;
   border-radius: 4px;
 }
-.second-effect {
+.second_effect {
   align-items: center;
   margin-bottom: 20px;
 }
@@ -273,7 +273,7 @@ select {
   border-radius: 5px;
   margin-left: 10px;
 }
-.btn-lut {
+.btn_lut {
   padding: 5px 5px;
   width: 100px;
   border-radius: 5px;
@@ -281,7 +281,7 @@ select {
   background: transparent;
   cursor: pointer;
 }
-.btn-submit {
+.btn_submit {
   padding: 7px 7px;
   width: 200px;
   border-radius: 5px;

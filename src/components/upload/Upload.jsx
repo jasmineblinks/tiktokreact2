@@ -88,15 +88,15 @@ function Upload() {
 
   return (
     <div className={`${classes.upload_banner} `}>
-      <div className="upload-content">
-        <div className="first-wrapper">
-          <div className="first-wrapper__content">
+      <div className={classes.upload_content}>
+        <div className={classes.first_wrapper}>
+          <div className={classes.first_wrapper__content}>
             <h3>Upload video</h3>
             <h4>Post a video to your account</h4>
           </div>
 
-          <div className="zone">
-            <div className="inner__content">
+          <div className={classes.zone}>
+            <div className={classes.inner__content}>
               <img src={upload} alt="logo" />
               <div>
                 <h4>Select video to upload</h4>
@@ -106,10 +106,10 @@ function Upload() {
               <span>
                 720x1280 resolution or higher up to 180 seconds Less than 1GB
               </span>
-              <div class="selectFile">
+              <div className={classes.selectFile}>
                 <label for="file">Select file</label>
                 <input
-                  className="input-text"
+                  className={classes.input_text}
                   type="file"
                   name="files[]"
                   id="file"
@@ -146,11 +146,11 @@ function Upload() {
             )}
           </div>
         </div>
-        <div className="second-wrapper">
+        <div className={classes.second_wrapper}>
           <label htmlFor="">Caption</label>
 
           <input type="text" name="" id="caption" placeholder="@ #" />
-          <div className="input-box">
+          <div className={classes.input_box}>
             <label htmlFor="">
               Cloud Name:
               <input
@@ -175,7 +175,7 @@ function Upload() {
           </div>
 
           <div>
-            <div className="first-effect">
+            <div className={classes.first_effect}>
               <div>
                 <label htmlFor="">
                   Blur:
@@ -218,7 +218,7 @@ function Upload() {
                   />
                 </label>
               </div>
-              <div className="visual">
+              <div className={classes.visual}>
                 <label htmlFor="">
                   Loop:{" "}
                   <input
@@ -247,9 +247,9 @@ function Upload() {
                 </label>
               </div> */}
             </div>
-            <div className="second-effect">
+            <div className={classes.second_effect}>
               <div>
-                <div className="boomerang">
+                <div className={classes.boomerang}>
                   <label htmlFor="">Boomerang:</label>
                   <select
                     name="startOffset"
@@ -276,10 +276,10 @@ function Upload() {
                 </div>
               </div>
               <div>
-                <button className="btn-lut">Lut</button>
+                <button className={classes.btn_lut}>Lut</button>
               </div>
               <div>
-                <div className="borders">
+                <div className={classes.borders}>
                   <label htmlFor="">Borders:</label>
                   <select name="width" id="width" className="select-effect">
                     <option value="">1</option>
@@ -300,7 +300,7 @@ function Upload() {
             </div>
             <div>
               <button
-                className="btn-submit"
+                className={classes.btn_submit}
                 onClick={handleSubmit}
                 disabled={(!cldCloudName, !preset)}>
                 Upload

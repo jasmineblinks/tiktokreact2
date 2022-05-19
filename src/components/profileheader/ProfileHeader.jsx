@@ -5,26 +5,26 @@ import { Link } from "react-router-dom";
 import profile from "../../images/profile.jpg";
 import letter from "../../images/letter.svg";
 import message from "../../images/message.svg";
-import "./profileheader.css";
+import classes from "./profileheader.module.css";
 
 function ProfileHeader() {
   return (
-    <div className="nav-bar">
-      <img src={tiktoklogo} className="app-logos" alt="logo" />
-      <form className="form__banner">
+    <div className={classes.nav_bar}>
+      <img src={tiktoklogo} className={classes.app_logos} alt="logo" />
+      <form className={classes.form__banner}>
         <input
-          className="search__input"
+          className={classes.search__input}
           type="text"
           placeholder="Search accounts and videos"
           name="search"
         />
-        <button className="search__submit" type="submit">
+        <button className={classes.search__submit} type="submit">
           <img src={search} alt="logo" />
         </button>
       </form>
-      <ul className="nav-links">
+      <ul className={classes.nav_links}>
         <Link to="/upload">
-          <li className="upload"> </li>
+          <li className={classes.upload}> </li>
         </Link>
 
         <li>
@@ -35,7 +35,7 @@ function ProfileHeader() {
           <img src={letter} alt="logo" />
         </li>
         <li>
-          <img className="profile" src={profile} alt="logo" />
+          <img className={classes.profile} src={profile} alt="logo" />
         </li>
       </ul>
     </div>
