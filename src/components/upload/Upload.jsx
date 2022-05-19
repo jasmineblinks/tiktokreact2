@@ -2,7 +2,13 @@ import React, { useState } from "react";
 import "./upload.css";
 import upload from "../../images/upload.svg";
 import { AdvancedVideo } from "@cloudinary/react";
-
+import {
+  reverse,
+  accelerate,
+  blur,
+  deshake,
+  noise,
+} from "@cloudinary/url-gen/actions/effect";
 import { Cloudinary } from "@cloudinary/url-gen";
 
 function handleErrors(response) {
@@ -18,7 +24,7 @@ function Upload() {
   const [transformState, setTransformState] = useState({
     blur: 500,
     deshake: 32,
-    noise: 100,
+    noise: 50,
     loop: "34",
     reverse: "backwards",
     boomerang: "5.0",
@@ -62,16 +68,7 @@ function Upload() {
     setLoading(true);
     fetch(`https://api.cloudinary.com/v1_1/${cldCloudName}/upload`, {
       method: "POST",
-      // body: formData,
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        cldCloudName,
-        preset,
-        videoState,
-        transformState,
-      }),
+      body: formData,
     })
       .then((res) => res.json())
       // .then((res) => console.log(res))
@@ -80,30 +77,28 @@ function Upload() {
         setVideoState(res.public_id);
         setTransformState((prev) => ({
           ...prev,
-          height: res.height,
-          width: res.width,
+          noise: res.noise,
           blur: res.blur,
-          deshake: res.deshake,
         }));
 
         setLoading(false);
       })
       .then(handleErrors);
   };
-  const data = {
-    videoSrc: "",
-    caption: "This is my upload ",
-    transformState: {
-      blur: 0,
-      deshake: 0,
-      noise: 0,
-      loop: 0,
-      reverse: "backwards",
-      boomerang: "solid 3 green",
-      by3dLut: "iwltbap_aspen.3dl",
-    },
-  };
-  console.log(data);
+  // const data = {
+  //   videoSrc: "",
+  //   caption: "This is my upload ",
+  //   transformState: {
+  //     blur: 0,
+  //     deshake: 0,
+  //     noise: 0,
+  //     loop: 0,
+  //     reverse: "backwards",
+  //     boomerang: "solid 3 green",
+  //     by3dLut: "iwltbap_aspen.3dl",
+  //   },
+  // };
+  // console.log(data);
 
   return (
     <div className="upload-banner">
@@ -136,6 +131,32 @@ function Upload() {
                 />
               </div>
             </div>
+          </div>
+          <div>
+            {loading && <p>Loading...</p>}
+            {videoState ? (
+              <AdvancedVideo
+                // src={}
+                cldVid={cld
+                  .video(videoState)
+                  .effect(
+                    noise(transformState.noise)
+                    // .blur(transformState.blur)
+                    // .resize(
+                    // fill(transformState.fill)
+                    //   .width(transformState.width)
+                    //   .height(transformState.height)
+
+                    // .gravity(
+                    //   Gravity.autoGravity().autoFocus(AutoFocus.focusOn(FocusOn.faces()))
+                    // )
+                  )
+                  .effect(blur(transformState.blur))}
+                controls
+              />
+            ) : (
+              <div></div>
+            )}
           </div>
         </div>
         <div className="second-wrapper">
@@ -184,6 +205,20 @@ function Upload() {
               </div>
               <div>
                 <label htmlFor="">
+                  Virtual Noise:
+                  <input
+                    type="range"
+                    name="noise"
+                    id="noise"
+                    min="0"
+                    max="2000"
+                    onChange={onChange}
+                    value={transformState.noise}
+                  />
+                </label>
+              </div>
+              <div>
+                <label htmlFor="">
                   Deshake:{" "}
                   <input
                     type="range"
@@ -210,7 +245,7 @@ function Upload() {
                   />
                 </label>
               </div>
-              <div className="visual">
+              {/* <div className="visual">
                 <label htmlFor="">
                   Visual noise:{" "}
                   <input
@@ -219,11 +254,11 @@ function Upload() {
                     id="visual-noise"
                     value={transformState.noise}
                     onChange={onChange}
-                    min="1"
-                    max="100"
+                    min="0"
+                    max="2000"
                   />
                 </label>
-              </div>
+              </div> */}
             </div>
             <div className="second-effect">
               <div>
