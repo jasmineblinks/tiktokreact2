@@ -18,7 +18,7 @@ function Upload() {
   const [transformState, setTransformState] = useState({
     blur: 500,
     deshake: 32,
-    noise: 50,
+    noise: 100,
     loop: "34",
     reverse: "backwards",
     boomerang: "5.0",
@@ -217,6 +217,8 @@ function Upload() {
                     type="range"
                     name="visual-noise"
                     id="visual-noise"
+                    value={transformState.noise}
+                    onChange={onChange}
                     min="1"
                     max="100"
                   />
@@ -283,7 +285,9 @@ function Upload() {
               </button>
             </div>
           </div>
+
           {/* 
+          
           <label htmlFor="">Cover</label>
           <textarea name="" id="cover" cols="30" rows="10"></textarea>
           <label for="country">Who can view this video</label>

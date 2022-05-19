@@ -10,7 +10,13 @@ import { FocusOn } from "@cloudinary/url-gen/qualifiers/focusOn";
 import { Gravity } from "@cloudinary/url-gen/qualifiers";
 import { AutoFocus } from "@cloudinary/url-gen/qualifiers/autoFocus";
 import { transform } from "lodash";
-import { reverse, accelerate, blur } from "@cloudinary/url-gen/actions/effect";
+import {
+  reverse,
+  accelerate,
+  blur,
+  deshake,
+  noise,
+} from "@cloudinary/url-gen/actions/effect";
 
 // import Transformation from "@cloudinary/url-gen/backwards/transformation";
 // import { Transformation } from "@cloudinary/url-gen";
@@ -34,6 +40,7 @@ const VideoEdit = () => {
     // height: 60,
     blur: 500,
     deshake: 32,
+    noise: 50,
   });
   const [cldCloudName, setCldCloudName] = useState("");
 
@@ -80,8 +87,8 @@ const VideoEdit = () => {
         setVideoSrc(res.public_id);
         setTransformState((prev) => ({
           ...prev,
-          height: res.height,
-          width: res.width,
+          noise: res.noise,
+          blur: res.blur,
         }));
 
         setLoading(false);
@@ -164,10 +171,17 @@ const VideoEdit = () => {
                 value={transformState.height}
                 name="height"
               /> */}
+              <label htmlFor="">Noise:</label>
+              <input
+                onChange={onChange}
+                type="range"
+                value={transformState.noise}
+                name="noise"
+              />
               <label htmlFor="">Blur:</label>
               <input
                 onChange={onChange}
-                type="text"
+                type="range"
                 value={transformState.blur}
                 name="blur"
               />
@@ -201,18 +215,21 @@ const VideoEdit = () => {
             {videoSrc ? (
               <AdvancedVideo
                 // src={}
-                cldVid={cld.video(videoSrc).effect(
-                  blur(transformState.blur)
-                  // .deshake(transformState.deshake)
-                  // .resize(
-                  // fill(transformState.fill)
-                  //   .width(transformState.width)
-                  //   .height(transformState.height)
+                cldVid={cld
+                  .video(videoSrc)
+                  .effect(
+                    noise(transformState.noise)
+                    // .blur(transformState.blur)
+                    // .resize(
+                    // fill(transformState.fill)
+                    //   .width(transformState.width)
+                    //   .height(transformState.height)
 
-                  // .gravity(
-                  //   Gravity.autoGravity().autoFocus(AutoFocus.focusOn(FocusOn.faces()))
-                  // )
-                )}
+                    // .gravity(
+                    //   Gravity.autoGravity().autoFocus(AutoFocus.focusOn(FocusOn.faces()))
+                    // )
+                  )
+                  .effect(blur(transformState.blur))}
                 controls
               />
             ) : (
