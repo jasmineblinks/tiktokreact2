@@ -1,10 +1,10 @@
 import React from "react";
-import "./minicard.css";
+import classes from "./minicard.module.css";
 
 function Minicard() {
   return (
-    <div className=" minicard">
-      <div className="suggest-follow">
+    <div className={classes.minicard}>
+      <div className={classes.suggest_follow}>
         <h5>Follow</h5>
       </div>
     </div>

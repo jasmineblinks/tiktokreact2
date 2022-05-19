@@ -1,4 +1,4 @@
-.followers-banner {
+.followers_banner {
   min-width: 230px;
   height: 700px;
   padding: 10px;
@@ -23,15 +23,15 @@
   background: lightgrey;
 }
 
-.bold-content {
+.bold_content {
   font-weight: 600;
   color: #fe2c55;
 }
-.suggest-account {
+.suggest_account {
   color: #707278;
 }
 
-.followers-section {
+.followers_section {
   display: flex;
   flex-direction: row;
   margin: 10px 0 5px 0px;
@@ -64,7 +64,7 @@
 }
 
 @media only screen and (max-width: 850px) {
-  .followers-banner {
+  .followers_banner {
     min-width: 20px;
     height: 100%;
     padding: 5px;
@@ -74,13 +74,13 @@
     overflow-x: hidden;
     border-right: 1px solid lightgrey;
   }
-  .followers-section h4 {
+  .followers_section h4 {
     display: none;
   }
-  .suggest-account {
+  .suggest_account {
     display: none;
   }
-  .followers-accounts {
+  .followers_accounts {
     display: none;
   }
   .line {
