@@ -4,7 +4,10 @@
 .cardContainer {
   display: flex;
   justify-content: center;
-  margin: 50px 500px auto;
+  position: absolute;
+  top: 150px;
+  left: 530px;
+  /* margin: 50px 500px auto; */
   border-bottom: 1px solid rgb(227, 227, 228) !important;
   width: 100% !important;
   max-width: 850px;
@@ -19,7 +22,7 @@
   display: flex;
   line-height: 5px;
 }
-.section-content {
+.section_content {
   display: flex;
   flex-direction: column;
 }

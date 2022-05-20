@@ -10,7 +10,10 @@ import classes from "./profileheader.module.css";
 function ProfileHeader() {
   return (
     <div className={classes.nav_bar}>
-      <img src={tiktoklogo} className={classes.app_logos} alt="logo" />
+      <Link to="/">
+        <img src={tiktoklogo} className={classes.app_logos} alt="logo" />
+      </Link>
+
       <form className={classes.form__banner}>
         <input
           className={classes.search__input}
