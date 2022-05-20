@@ -2,11 +2,11 @@ import React from "react";
 import Card from "../card/Card";
 import Followers from "../followers/Followers";
 import Header from "./../header/Header";
-import "./home.css";
+import classes from "./home.module.css";
 
 function Home() {
   return (
-    <div className="home-banner">
+    <div className={classes.home_banner}>
       <Header />
       <Followers />
       <Card />

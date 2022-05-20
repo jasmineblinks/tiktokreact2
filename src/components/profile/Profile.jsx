@@ -1,12 +1,13 @@
 import React from "react";
 import Card from "../card/Card";
 import Followers from "../followers/Followers";
+import classes from "./profile.module.css";
 
 import ProfileHeader from "./../profileheader/ProfileHeader";
 
 function Profile() {
   return (
-    <div>
+    <div className={classes.main_profile_banner}>
       <ProfileHeader />
       <Followers />
       <Card />

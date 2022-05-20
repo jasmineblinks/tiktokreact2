@@ -4,14 +4,15 @@
 .cardContainer {
   display: flex;
   justify-content: center;
-  position: absolute;
+  /* position: absolute;
   top: 150px;
-  left: 530px;
-  /* margin: 50px 500px auto; */
+  left: 530px; */
+  overflow-y: auto;
+  margin: 50px 500px auto;
   border-bottom: 1px solid rgb(227, 227, 228) !important;
-  width: 100% !important;
+  width: 100%;
   max-width: 850px;
-  height: 650px !important;
+  height: calc(100vh-90px);
 }
 .card_section {
   display: flex;
