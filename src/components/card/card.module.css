@@ -4,6 +4,7 @@
 .cardContainer {
   display: flex;
   justify-content: center;
+  flex-direction: column;
   /* position: absolute;
   top: 150px;
   left: 530px; */

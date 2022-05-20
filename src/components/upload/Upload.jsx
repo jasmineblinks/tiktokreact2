@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import classes from "./upload.module.css";
 import upload from "../../images/upload.svg";
 import { AdvancedVideo } from "@cloudinary/react";
@@ -10,6 +10,8 @@ import {
   noise,
 } from "@cloudinary/url-gen/actions/effect";
 import { Cloudinary } from "@cloudinary/url-gen";
+import { VideContext } from "../../App";
+import { useNavigate } from "react-router-dom";
 
 function handleErrors(response) {
   if (!response.ok) {
@@ -18,8 +20,10 @@ function handleErrors(response) {
   return response;
 }
 function Upload() {
+  const router = useNavigate();
   const [file, setFile] = useState(null);
   const [caption, setCaption] = useState("");
+  const [isPost, setIsPost] = useState(false);
   const [videoState, setVideoState] = useState("");
   const [transformState, setTransformState] = useState({
     blur: 500,
@@ -82,8 +86,21 @@ function Upload() {
         }));
 
         setLoading(false);
+        setIsPost(true);
       })
       .then(handleErrors);
+  };
+  const { onHandleUpload } = useContext(VideContext);
+
+  const handleUpload = () => {
+    const data = {
+      caption,
+      videoUrl: videoState,
+      transformState,
+    };
+    onHandleUpload(data);
+    setIsPost(false);
+    router("/");
   };
 
   return (
@@ -152,6 +169,8 @@ function Upload() {
           <input
             className={classes.caption}
             type="text"
+            onChange={({ target }) => setCaption(target.value)}
+            value={caption}
             name=""
             placeholder="@ #"
           />
@@ -310,12 +329,18 @@ function Upload() {
               </div>
             </div>
             <div>
-              <button
-                className={classes.btn_submit}
-                onClick={handleSubmit}
-                disabled={(!cldCloudName, !preset)}>
-                Upload
-              </button>
+              {!isPost ? (
+                <button
+                  className={classes.btn_submit}
+                  onClick={handleSubmit}
+                  disabled={(!cldCloudName, !preset)}>
+                  Upload
+                </button>
+              ) : (
+                <button className={classes.btn_submit} onClick={handleUpload}>
+                  post
+                </button>
+              )}
             </div>
           </div>
 
