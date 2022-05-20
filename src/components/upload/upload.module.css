@@ -8,10 +8,10 @@
   display: flex;
   justify-content: space-around;
   max-width: 80%;
-  height: 95vh;
+  height: 100vh;
   align-items: flex-start;
-  padding: 20px 20px;
-  margin: 30px auto auto auto;
+  padding: 30px 30px;
+  margin: 30px auto 100px auto;
   background: #ffffff;
   border-radius: 10px;
 }
@@ -75,7 +75,7 @@
   transition: all 0.3s ease-out;
 }
 .first_wrapper__content {
-  margin: 20px 0 30px 100px;
+  margin: 20px 0 30px 55px;
 }
 .inner__content {
   justify-content: center;
@@ -89,7 +89,6 @@
 .selectFile {
   height: 200px;
   margin: 20px auto;
-
   width: 200px;
 }
 
@@ -98,6 +97,7 @@
   cursor: pointer;
   display: block;
   left: 0;
+
   top: 0;
   width: 100%;
   border-radius: 5px;
@@ -115,7 +115,7 @@
   font-weight: 400;
   box-shadow: 0 1px 1px gray;
 }
-.selectFile .input-text[type="file"] {
+.selectFile .input_text[type="file"] {
   opacity: 0;
 }
 
@@ -266,7 +266,7 @@ input:checked + .slider:before {
   font-size: 2vmin;
 }
 select {
-  padding: 8px 16px;
+  padding: 8px 8px;
   border: 1px solid #000;
   cursor: pointer;
   user-select: none;

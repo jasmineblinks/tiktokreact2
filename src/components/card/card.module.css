@@ -22,10 +22,10 @@
   display: flex;
   line-height: 5px;
 }
-.section_content {
+/* .section_content {
   display: flex;
   flex-direction: column;
-}
+} */
 .icon {
   background-color: #f1f1f2;
   border-radius: 50%;
@@ -102,9 +102,9 @@
   margin-left: 70px;
 }
 .socials {
-  margin-left: 150px;
-  margin-top: 150px;
-  gap: 15px;
+  margin-left: 20px;
+  margin-top: 190px;
+  gap: 10px;
   display: flex;
   flex-direction: column;
 }

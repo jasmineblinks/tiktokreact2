@@ -254,7 +254,7 @@ function Upload() {
                   <select
                     name="startOffset"
                     id="startOffset"
-                    className="select-effect">
+                    className={classes.select_effect}>
                     <option value="">startOffset</option>
                     <option value="">1.0</option>
                     <option value="">2.o</option>
@@ -265,7 +265,7 @@ function Upload() {
                   <select
                     name=" endOffSet"
                     id=" endOffSet"
-                    className="select-effect">
+                    className={classes.select_effect}>
                     <option value=" endOffSet"> endOffSet</option>
                     <option value="">1.0</option>
                     <option value="">2.o</option>
@@ -281,14 +281,20 @@ function Upload() {
               <div>
                 <div className={classes.borders}>
                   <label htmlFor="">Borders:</label>
-                  <select name="width" id="width" className="select-effect">
+                  <select
+                    name="width"
+                    id="width"
+                    className={classes.select_effect}>
                     <option value="">1</option>
                     <option value="">2</option>
                     <option value="">3</option>
                     <option value="">4</option>
                     <option value="">5</option>
                   </select>
-                  <select name="color" id="color" className="select-effect">
+                  <select
+                    name="color"
+                    id="color"
+                    className={classes.select_effect}>
                     <option value="">red</option>
                     <option value="">green</option>
                     <option value="">blue</option>
