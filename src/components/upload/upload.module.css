@@ -33,13 +33,13 @@
   flex-direction: column;
   justify-content: center;
 }
-#caption {
+.caption {
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
   outline: none;
 }
-#caption::placeholder {
+.caption::placeholder {
   text-align: right;
   color: #000;
   font-weight: bold;

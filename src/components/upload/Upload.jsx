@@ -149,7 +149,12 @@ function Upload() {
         <div className={classes.second_wrapper}>
           <label htmlFor="">Caption</label>
 
-          <input type="text" name="" id="caption" placeholder="@ #" />
+          <input
+            className={classes.caption}
+            type="text"
+            name=""
+            placeholder="@ #"
+          />
           <div className={classes.input_box}>
             <label htmlFor="">
               Cloud Name:
