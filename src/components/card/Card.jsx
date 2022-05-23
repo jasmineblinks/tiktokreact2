@@ -105,17 +105,17 @@ function Card() {
 
             <div className={classes.socials}>
               <div className={classes.icon}>
-                <img src={heart} width={"25px"} alt="heart" />
+                <img src={heart} alt="heart" />
               </div>
 
               <div className={classes.social_tag}>5.1m</div>
               <div className={classes.icon}>
-                <img src={comment} width={"25px"} alt="comment" />
+                <img src={comment} alt="comment" />
               </div>
 
               <div className={classes.social_tag}>20.3k</div>
               <div className={classes.icon}>
-                <img src={share} width={"25px"} alt="share" />
+                <img src={share} alt="share" />
               </div>
 
               <div className={classes.social_tag}>4000</div>
