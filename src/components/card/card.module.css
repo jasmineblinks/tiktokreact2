@@ -132,7 +132,7 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
-    margin: 50px 600px auto;
+    margin: 50px -300px auto 490px;
     border-bottom: 1px solid rgb(227, 227, 228) !important;
     width: 100%;
     max-width: 850px;

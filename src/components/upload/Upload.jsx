@@ -206,7 +206,7 @@ function Upload() {
                   <input
                     type="range"
                     name="blur"
-                    id="blur"
+                    className={classes.loop}
                     min="0"
                     max="2000"
                     onChange={onChange}
@@ -220,7 +220,7 @@ function Upload() {
                   <input
                     type="range"
                     name="noise"
-                    id="noise"
+                    className={classes.loop}
                     min="0"
                     max="2000"
                     onChange={onChange}
@@ -234,7 +234,7 @@ function Upload() {
                   <input
                     type="range"
                     name="deshake"
-                    id="deshake"
+                    className={classes.loop}
                     min="0"
                     max="64"
                     onChange={onChange}
@@ -248,7 +248,7 @@ function Upload() {
                   <input
                     type="range"
                     name="loop"
-                    id="loop"
+                    className={classes.loop}
                     min="1"
                     max="10"
                     onChange={onChange}

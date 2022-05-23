@@ -304,6 +304,9 @@ select {
     background: #ffffff;
     border-radius: 10px;
   }
+  .first_wrapper__content {
+    margin: 0px;
+  }
 }
 @media only screen and (max-width: 766px) {
   .upload_content {
@@ -317,6 +320,9 @@ select {
     margin: 30px auto 100px auto;
     background: #ffffff;
     border-radius: 10px;
+  }
+  .loop {
+    width: 100px;
   }
 
   select {
@@ -333,6 +339,72 @@ select {
     width: 50px;
     border-radius: 5px;
     font-size: 2vmin;
+    background: transparent;
+    cursor: pointer;
+  }
+}
+@media only screen and (max-width: 590px) {
+  .upload_content {
+    display: flex;
+    flex-direction: column;
+
+    max-width: 80%;
+    height: auto;
+    align-items: flex-start;
+    padding: 30px 30px;
+    margin: 30px auto 100px auto;
+    background: #ffffff;
+    border-radius: 10px;
+  }
+  .input_box {
+    flex-direction: column;
+  }
+
+  .input_box label {
+    font-size: 16px;
+  }
+  .zone {
+    display: flex;
+    background: #fff;
+    width: 250px;
+    padding: 10px 10px;
+    border: 2px dashed lightgrey;
+    border-radius: 5px;
+    color: #000;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: -70px;
+    height: 450px;
+    transition: all 0.3s ease-out;
+  }
+  .first_effect,
+  .second_effect {
+    flex-direction: column;
+  }
+  .second_effect label {
+    font-size: 16px;
+    margin-left: -5px;
+  }
+
+  .loop {
+    width: 150px;
+  }
+
+  select {
+    padding: 5px 5px;
+    border: 1px solid #000;
+    cursor: pointer;
+    width: 80px;
+    user-select: none;
+    border-radius: 5px;
+    /* margin-left: 10px; */
+  }
+  .btn_lut {
+    padding: 5px 5px;
+    width: 50px;
+    border-radius: 5px;
+    font-size: 3vmin;
     background: transparent;
     cursor: pointer;
   }
