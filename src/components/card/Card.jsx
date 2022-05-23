@@ -41,9 +41,15 @@ function Card() {
               />
               <div>
                 <div className={classes.section_profile}>
-                  <h3 className={classes.bold}>emmzy</h3>
-                  <p className={classes.username}>emma mbonu</p>
+                  <div>
+                    <h3 className={classes.bold}>Emmzy</h3>
+                    <p className={classes.username}>Emma Mbonu</p>
+                  </div>
+                  {/* <div>
+                    <Minicard />
+                  </div> */}
                 </div>
+
                 <h5>{item.caption}</h5>
               </div>
             </div>
@@ -117,8 +123,7 @@ function Card() {
           </div>
         </div>
       ))}
-
-      {/* <Minicard /> */}
+      <div></div>
     </div>
   );
 }
