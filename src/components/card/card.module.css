@@ -28,11 +28,14 @@
 .icon {
   background-color: #f1f1f2;
   border-radius: 50%;
-  padding: 14px 14px;
+  height: 30px;
+  width: 30px;
+  /* padding: 5px 5px; */
   text-align: center;
 }
 .icon img {
-  width: 25px;
+  width: 18px;
+  margin-top: 5px;
 }
 .bold {
   font-weight: 600;
@@ -81,6 +84,7 @@
 }
 .social_tag {
   margin: 0 20px 0 10px;
+  font-size: 15px;
 }
 .video_banner {
   border: 1px solid red;
@@ -100,13 +104,13 @@
 
 .video {
   width: 320px;
-  height: 480px;
+  /* height: 480px; */
   border-radius: 15px;
   margin-left: 70px;
 }
 .socials {
-  margin-left: 20px;
-  margin-top: 190px;
+  margin-left: 12px;
+  margin-top: 110px;
   gap: 10px;
   display: flex;
   flex-direction: column;
@@ -128,12 +132,15 @@
   }
   .socials {
     margin-left: 10px;
-    margin-top: 90px;
+    margin-top: 10px;
     gap: 8px;
     display: flex;
     flex-direction: column;
   }
-
+  .social_tag {
+    margin: 0 20px 0 10px;
+    font-size: 13px;
+  }
   .content_card {
     margin-top: 150px;
     border-bottom: 1px solid rgb(227, 227, 228) !important;
@@ -143,16 +150,17 @@
   .icon {
     background-color: #f1f1f2;
     border-radius: 50%;
-    width: 20px;
-    padding: 8px 8px;
+    width: 30px;
+    height: 30px;
+    /* padding: 8px 8px; */
     text-align: center;
   }
   .icon img {
-    width: 18px;
+    width: 16px;
   }
   .video {
     max-width: 200px;
-    height: 300px;
+    /* height: 300px; */
     border-radius: 15px;
     margin-left: 13px;
   }

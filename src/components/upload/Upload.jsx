@@ -136,7 +136,7 @@ function Upload() {
             </div>
           </div>
           <div>
-            {loading && <p>Loading...</p>}
+            {/* {loading && <p>Loading...</p>} */}
             {videoState ? (
               <AdvancedVideo
                 // src={}
@@ -328,12 +328,14 @@ function Upload() {
                 </div>
               </div>
             </div>
+
             <div>
+              {loading && <p>Loading...</p>}
               {!isPost ? (
                 <button
                   className={classes.btn_submit}
                   onClick={handleSubmit}
-                  disabled={(!cldCloudName, !preset)}>
+                  disabled={(!cldCloudName, !preset, loading)}>
                   Upload
                 </button>
               ) : (
